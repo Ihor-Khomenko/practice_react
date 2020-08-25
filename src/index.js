@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+
+function Hello(props) {
+  console.log(props);
+  return <div>
+    
+    <h1>Welcome to my {props.library}</h1>
+  <p>{props.message}</p>
+  </div>;
+}
+
 
 ReactDOM.render(
-  React.createElement(
-    "div",
-     { style: { color: "blue" } },
-     React.createElement("li", null, "Sandwiches")),
+  <Hello library="Profile" message="This is my profile" />,
   document.getElementById('root')
 );
